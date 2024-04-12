@@ -1,10 +1,11 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import "./NoticeList.css";
+import CardWrapper from "./CardWrapper";
 
 const NoticeList = ({ title = "Notice", notices }) => {
   return (
-    <Box sx={{ border: "2px solid blue", padding: '1rem' }}>
+    <CardWrapper>
       <Typography align='left' variant="h4" gutterBottom>
         {title}
       </Typography>
@@ -17,7 +18,7 @@ const NoticeList = ({ title = "Notice", notices }) => {
           </li>
         ))}
       </ul>
-    </Box>
+    </CardWrapper>
   );
 };
 

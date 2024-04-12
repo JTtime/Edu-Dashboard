@@ -19,6 +19,7 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
+import CardWrapper from "./CardWrapper";
 
 ChartJS.register(
   CategoryScale,
@@ -90,7 +91,7 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
   };
 
   return (
-    <Box sx={{ border: "2px solid red" }}>
+    <CardWrapper>
       <Box>
         <Grid container spacing={2}>
           <Grid item xs={4}>
@@ -119,7 +120,7 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
         </Grid>
       </Box>
       <Line data={chartData} options={options} />
-    </Box>
+      </CardWrapper>
   );
 }
 

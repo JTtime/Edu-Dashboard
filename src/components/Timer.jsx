@@ -31,7 +31,7 @@ const TimeDisplay = () => {
   };
 
   return (
-    <Paper style={{ padding: 20 }}>
+    <Paper style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', height: 'fit-content', padding: '0.5rem' }}>
       <Typography variant="h5">{formatTime(currentTime)}</Typography>
       <Typography variant="subtitle1">{formatDate(currentTime)}</Typography>
     </Paper>

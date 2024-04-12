@@ -15,7 +15,8 @@
   }
   
   .content {
-    margin-top: 20px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
   }
   
   .content-item {
@@ -26,6 +27,10 @@
   
   .key {
     font-weight: bold;
+  }
+
+  .value {
+    color: blue
   }
   
   .circle-wrapper {

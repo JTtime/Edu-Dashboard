@@ -6,6 +6,7 @@ import Divider from "@mui/material/Divider";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; //theme
 import "primereact/resources/primereact.min.css"; //core css
 import "primeicons/primeicons.css"; //icons
+import CardWrapper from "./CardWrapper";
 
 const VerticalCard = () => {
   const data = [
@@ -50,6 +51,7 @@ const VerticalCard = () => {
   });
 
   return (
+    <CardWrapper>
     <div className="vertical-card">
       {data.map((category, index) => (
         <div key={index} style={{ width: "100%" }}>
@@ -72,7 +74,7 @@ const VerticalCard = () => {
                   <span className="value">{value}</span>
                 ) : (
                   <div className="circle-wrapper">
-                    <div className="circle">{value}</div>
+                    <div className="circle value">{value}</div>
                   </div>
                 )}
               </div>
@@ -81,6 +83,7 @@ const VerticalCard = () => {
         </div>
       ))}
     </div>
+    </CardWrapper>
   );
 };
 
