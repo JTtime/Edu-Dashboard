@@ -48,7 +48,9 @@ const VerticalCard: React.FC = () => {
 
         // Set the width of hr lines based on the title width
         hrLines.forEach((hrLine) => {
-          (hrLine as HTMLElement).style.width = `calc(50% - ${titleWidth / 2}px)`;
+          (hrLine as HTMLElement).style.width = `calc(50% - ${
+            titleWidth / 2
+          }px)`;
         });
       }
     };
@@ -77,14 +79,29 @@ const VerticalCard: React.FC = () => {
             </Divider>
 
             <div className="content">
-              {Object.entries(category.content).map(([key, value], index) => (
-                <div key={index} className="content-item">
-                  <span className="key">{key}</span>
-                  {typeof value === "string" ? (
-                    <span className="value">{value}</span>
+              {Object.entries(category.content).map(([key, value]) => (
+                <div key={index} >
+                  {index % 2 === 0 ? (
+                    <div className="content-item">
+                      <span className="key">{key}</span>
+                      {typeof value === "string" ? (
+                        <span className="value">{value}</span>
+                      ) : (
+                        <div className="circle-wrapper">
+                          <div className="circle value">{value}</div>
+                        </div>
+                      )}
+                    </div>
                   ) : (
-                    <div className="circle-wrapper">
-                      <div className="circle value">{value}</div>
+                    <div className="content-item">
+                      {typeof value === "string" ? (
+                        <span className="value">{value}</span>
+                      ) : (
+                        <div className="circle-wrapper">
+                          <div className="circle value">{value}</div>
+                        </div>
+                      )}
+                      <span className="key">{key}</span>
                     </div>
                   )}
                 </div>
