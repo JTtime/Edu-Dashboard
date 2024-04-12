@@ -9,6 +9,8 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartOptions,
+  ChartData,
 } from "chart.js";
 import {
   Typography,
@@ -31,9 +33,29 @@ ChartJS.register(
   Legend
 );
 
-  
+interface Dataset {
+  label: string;
+  data?: number[];
+  borderColor?: string;
+  backgroundColor?: string;
+  fill?: boolean;
+}
 
-export default function LineChart({ data, title="syllabus", filterDropDowns }) {
+export interface LineChartFilterDropDowns {
+  state: string[];
+  university: string[];
+}
+
+interface LineChartProps {
+  data: {
+    labels: string[];
+    datasets?: Dataset[];
+  };
+  title?: string;
+  filterDropDowns?: LineChartFilterDropDowns;
+}
+
+const LineChart: React.FC<LineChartProps> = ({ data, title = "syllabus", filterDropDowns }) => {
   const defaultColorPalette = [
     "#3e95cd",
     "#8e5ea2",
@@ -56,7 +78,7 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
     })),
   };
 
-  const options = {
+  const options: ChartOptions<'line'> = {
     responsive: true,
     plugins: {
       legend: {
@@ -70,18 +92,6 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
         text: "SYLLABUS COMPLETION",
       },
     },
-    // scales: {
-    //   x: {
-    //     ticks: {
-    //       callback: (value, index, values) => {
-    //         if (typeof value === 'number' && value === parseInt(value)) {
-    //           return `[${value}]`;
-    //         }
-    //         return value;
-    //       },
-    //     },
-    //   },
-    // },
   };
 
   return (
@@ -99,7 +109,7 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
                     <FormControl key={filter} variant="outlined" fullWidth>
                       <InputLabel>{filter}</InputLabel>
                       <Select label={filter}>
-                        {options.map((option, index) => (
+                        {options.map((option: string, index: number) => (
                           <MenuItem key={indexOne+''+index} value={option}>
                             {option}
                           </MenuItem>
@@ -113,7 +123,9 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
           </Grid>
         </Grid>
       </Box>
-      <Line data={chartData} options={options} />
+      <Line data={chartData as ChartData<'line'>} options={options} />
       </CardWrapper>
   );
 }
+
+export default LineChart;

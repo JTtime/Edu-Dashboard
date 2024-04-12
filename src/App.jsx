@@ -1,21 +1,7 @@
-import { useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Layout from "./components/Layout";
-import TimeDisplay from "./components/Timer";
-// import PieChartComponent from './components/PieChartComponent'
-import PieChartWithLegend from "./components/PiechartwithLegend";
-import LineChart from "./components/LineChart";
-import NoticeList from "./components/NoticeList";
-import VerticalCard from "./components/VerticalCard";
-import HorizontalList from "./components/HorizontalList";
 import GridTemplate from "./components/GridTemplate";
-// import { useDrawingArea } from '@mui/x-charts/hooks';
-// import LineChart from './LineChart';
-
-import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 
 const lineChartdata = {
   labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -47,8 +33,6 @@ const notices = [
 ];
 
 function App() {
-  const [count, setCount] = useState(0);
-  // const { width, height, left, top } = useDrawingArea();
 
   const data = [
     { label: "Category A", name: "Category A", value: 400 },
@@ -66,35 +50,31 @@ function App() {
 
   return (
     <>
-      <PrimeReactProvider>
-        <Layout>
-          <Box sx={{ width: "100%" }}>
-            <GridTemplate
-              mockData={mockData}
-              lineChartdata={lineChartdata}
-              filterDropDowns={filterDropDowns}
-              piedata={data}
-              notices={notices}
-            />
-          </Box>
-          </Layout>
-          
+      <Layout>
+        <Box sx={{ width: "100%" }}>
+          <GridTemplate
+            mockData={mockData}
+            lineChartdata={lineChartdata}
+            filterDropDowns={filterDropDowns}
+            piedata={data}
+            notices={notices}
+          />
+        </Box>
+      </Layout>
 
-          {/* <TimeDisplay/> */}
-          {/* <PieChartComponent/> */}
+      {/* <TimeDisplay/> */}
+      {/* <PieChartComponent/> */}
 
-          {/* <PieChartWithLegend 
+      {/* <PieChartWithLegend 
       // x={left + width / 2} y={top + height / 2}
        data={data} title='query'/>
         */}
 
-          {/* <LineChart data={lineChartdata} title="Syllabus Completion" filterDropDowns={filterDropDowns}/> */}
-          {/* <NoticeList title="Latest Notices" notices={notices} /> */}
-          {/* <VerticalCard /> */}
+      {/* <LineChart data={lineChartdata} title="Syllabus Completion" filterDropDowns={filterDropDowns}/> */}
+      {/* <NoticeList title="Latest Notices" notices={notices} /> */}
+      {/* <VerticalCard /> */}
 
-          {/* <HorizontalList data={mockData} /> */}
-       
-      </PrimeReactProvider>
+      {/* <HorizontalList data={mockData} /> */}
     </>
   );
 }
