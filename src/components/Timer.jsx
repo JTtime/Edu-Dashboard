@@ -27,7 +27,7 @@ const TimeDisplay = () => {
 
   const formatDate = (date) => {
     const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
+    return date.toLocaleDateString('en-IN', options);
   };
 
   return (

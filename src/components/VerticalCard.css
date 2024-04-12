@@ -55,13 +55,11 @@
 
   .creative-title {
     position: relative;
-    /* width: fit-content; */
     margin: 0 auto;
     padding: 0 10px;
-    /* background-color: #ffffff; */
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.9);
-    z-index: 1; /* Ensure title appears above the horizontal rule */
+    z-index: 1;
   }
 
   .heading hr {
@@ -81,7 +79,7 @@
     left: 0;
     width: 200%;
     border-bottom: 1px solid #ccc;
-    z-index: -1; /* Ensure horizontal rule appears behind the title */
+    z-index: -1; 
   }
   
   /* .hr-lines{
@@ -145,28 +143,5 @@
     right: 0;
   }
   
-  /* p{
-    text-transform: uppercase;
-    color: red;
-  }
-  
-  section{
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    gap: 1rem;
-  
-  }
-  
-  div{
-    width: 500px;
-      border: 1px solid #ccc;
-    padding: 10px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.4;
-  } */
   
   

@@ -31,12 +31,6 @@ ChartJS.register(
   Legend
 );
 
-// ChartJS.register({
-//     scales: {
-//       category: ChartJS.CategoryScale,
-//       linear: ChartJS.LinearScale,
-//     },
-//   });
   
 
 export default function LineChart({ data, title="syllabus", filterDropDowns }) {
@@ -68,7 +62,7 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
       legend: {
         position: "bottom",
         labels: {
-            usePointStyle: true, // Use circles instead of rectangles
+            usePointStyle: true, 
           },
       },
       title: {
@@ -123,5 +117,3 @@ export default function LineChart({ data, title="syllabus", filterDropDowns }) {
       </CardWrapper>
   );
 }
-
-// export default LineChart;
