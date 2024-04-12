@@ -1,6 +1,5 @@
 import React from "react";
 import "./VerticalCard.css";
-// import { Divider } from "primereact/divider";
 import Divider from "@mui/material/Divider";
 
 import "primereact/resources/themes/lara-light-indigo/theme.css"; //theme

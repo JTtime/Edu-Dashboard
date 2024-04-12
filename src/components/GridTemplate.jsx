@@ -59,12 +59,6 @@ const GridTemplate = ({mockData, lineChartdata, filterDropDowns, piedata, notice
     { label: "Category D", name: "Category DTwo", value: 200, icon: 'pi pi-box' },
   ];
 
-  const mockDataTwo = [
-    { id: 5, icon: "https://example.com/icon1.png", Questions: 20 },
-    { id: 6, icon: "https://example.com/icon2.png", Subject: 108 },
-    { id: 7, icon: "https://example.com/icon3.png", Topic: 210 },
-    { id: 8, icon: "https://example.com/icon4.png", Content: 510 },
-  ];
 
   const dataThree = [
     { label: "Category A", name: "Category AThree", value: 400 },
@@ -114,7 +108,7 @@ const GridTemplate = ({mockData, lineChartdata, filterDropDowns, piedata, notice
         <LineChart data={lineChartdata} />
       </div>
       <div className="item pie-chart-legend-three">
-        <PieChartWithLegend title='Content' data={dataTwo} type='DISC'/>
+        <PieChartWithLegend title='Content' data={dataThree} type='DISC'/>
       </div>
       <div className="item line-chart-two">
         <LineChart data={lineChartdataTwo} filterDropDowns={filterDropDowns} />

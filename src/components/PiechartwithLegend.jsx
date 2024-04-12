@@ -1,7 +1,7 @@
 import React from 'react';
 import { Doughnut, Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Typography, Box, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import CardWrapper from './CardWrapper';
 ChartJS.register(ArcElement, Tooltip, Legend);
 

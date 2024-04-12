@@ -6,7 +6,6 @@ export default function HorizontalList ({ data }) {
     <div className="horizontal-list">
       {data?.map((item, index) => (
         <span key={index} className="list-item">
-          {/* <img src={item.icon} alt="icon" className="icon" /> */}
           <div className='icon'>
           <i className={item.icon} style={{ color: 'slateblue' }}></i>
           </div>
@@ -23,5 +22,3 @@ export default function HorizontalList ({ data }) {
     </div>
   );
 };
-
-// export default HorizontalList;

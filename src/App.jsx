@@ -15,8 +15,7 @@ import GridTemplate from "./components/GridTemplate";
 // import { useDrawingArea } from '@mui/x-charts/hooks';
 // import LineChart from './LineChart';
 
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-        
+import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 
 const lineChartdata = {
   labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -69,24 +68,32 @@ function App() {
     <>
       <PrimeReactProvider>
         <Layout>
-          {/* Your page content goes here */}
-         
+          <Box sx={{ width: "100%" }}>
+            <GridTemplate
+              mockData={mockData}
+              lineChartdata={lineChartdata}
+              filterDropDowns={filterDropDowns}
+              piedata={data}
+              notices={notices}
+            />
+          </Box>
+          </Layout>
+          
+
           {/* <TimeDisplay/> */}
           {/* <PieChartComponent/> */}
-          <Box sx={{ width: "100%" }}>
-            {/* <PieChartWithLegend 
+
+          {/* <PieChartWithLegend 
       // x={left + width / 2} y={top + height / 2}
        data={data} title='query'/>
         */}
 
-            {/* <LineChart data={lineChartdata} title="Syllabus Completion" filterDropDowns={filterDropDowns}/> */}
-            {/* <NoticeList title="Latest Notices" notices={notices} /> */}
-            {/* <VerticalCard /> */}
+          {/* <LineChart data={lineChartdata} title="Syllabus Completion" filterDropDowns={filterDropDowns}/> */}
+          {/* <NoticeList title="Latest Notices" notices={notices} /> */}
+          {/* <VerticalCard /> */}
 
-            {/* <HorizontalList data={mockData} /> */}
-            <GridTemplate mockData={mockData} lineChartdata={lineChartdata} filterDropDowns={filterDropDowns} piedata={data} notices={notices}/>
-          </Box>
-        </Layout>
+          {/* <HorizontalList data={mockData} /> */}
+       
       </PrimeReactProvider>
     </>
   );
