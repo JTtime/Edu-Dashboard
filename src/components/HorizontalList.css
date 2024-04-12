@@ -1,0 +1,42 @@
+.horizontal-list {
+    display: flex;
+    border: 2px solid red;
+    border-radius: 2px;
+    justify-content: space-around;
+    line-height: 0.5 rem;
+    align-items: center;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;    
+    margin-right: 2 rem;
+    
+  }
+  
+  .icon {
+    width: 4rem; 
+    height: 4rem; 
+    padding: 1 rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .value {
+    font-weight: bold;
+  }
+  
+  .key {
+    color: #999;
+  }
+  
