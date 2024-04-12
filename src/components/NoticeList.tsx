@@ -3,7 +3,18 @@ import { Typography } from "@mui/material";
 import "./NoticeList.css";
 import CardWrapper from "./CardWrapper";
 
-const NoticeList = ({ title = "Notice", notices }) => {
+interface Notice {
+  number: number;
+  for: string;
+  date: string;
+}
+
+interface NoticeListProps {
+  title?: string;
+  notices?: Notice[];
+}
+
+const NoticeList: React.FC<NoticeListProps> = ({ title = "Notice", notices }) => {
   return (
     <CardWrapper>
       <Typography align='left' variant="h4" gutterBottom>

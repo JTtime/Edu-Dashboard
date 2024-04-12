@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Paper } from '@mui/material';
 
-const TimeDisplay = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+const TimeDisplay: React.FC = () => {
+  const [currentTime, setCurrentTime] = useState<Date>(new Date());
+
+  type DateFormatOptions = {
+    weekday: 'short' | 'long' | 'narrow';
+    year: 'numeric';
+    month: 'numeric' | '2-digit' | 'long' | 'short' | 'narrow';
+    day: 'numeric' | '2-digit';
+  };
+  
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -12,7 +20,7 @@ const TimeDisplay = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const formatTime = (date) => {
+  const formatTime = (date: Date): string => {
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
@@ -25,8 +33,8 @@ const TimeDisplay = () => {
     return `${formattedHours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
   };
 
-  const formatDate = (date) => {
-    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+  const formatDate = (date: Date): string => {
+    const options: DateFormatOptions = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
     return date.toLocaleDateString('en-IN', options);
   };
 
