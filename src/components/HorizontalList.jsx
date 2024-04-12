@@ -1,5 +1,5 @@
 import React from 'react';
-import './HorizontalList.css'; // Import CSS file for styling
+import './HorizontalList.css';
 
 export default function HorizontalList ({ data }) {
   return (

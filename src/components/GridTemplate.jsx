@@ -1,5 +1,5 @@
 import React from 'react';
-import './GridTemplate.css'; // Import CSS file for styling
+import './GridTemplate.css'; 
 import HorizontalList from './HorizontalList';
 import VerticalList from './VerticalCard';
 import NoticeList from './NoticeList';

@@ -1,0 +1,13 @@
+li::marker{
+    content:"\25CF";
+    font-size: 1.5rem;
+    color: blue;
+    vertical-align: bottom;
+    margin-right: 0.5rem;
+ }
+
+ li {
+    text-wrap: nowrap;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+ }
