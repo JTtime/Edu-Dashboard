@@ -1,4 +1,19 @@
 # React + Vite
+# Project Name
+
+## Steps to Run the Project Locally
+
+### Step 1
+Run the following command to install all necessary dependencies required to run the project:
+'''yarn'''
+
+### Step 2
+Run the following command to start the project:
+
+'''yarn run dev'''
+
+
+This will run the project locally. You can then visit [http://localhost:5173/](http://localhost:5173/) to view the output.
 
 Steps to run project in your local machine
 Step 1) Run "yarn". It will install all necessary dependencies required to run project
