@@ -5,19 +5,19 @@
 
 ### Step 1
 Run the following command to install all necessary dependencies required to run the project:
-'''yarn'''
+```javascript
+yarn
+```
 
 ### Step 2
 Run the following command to start the project:
 
-'''yarn run dev'''
+```
+yarn run dev
+```
 
 
 This will run the project locally. You can then visit [http://localhost:5173/](http://localhost:5173/) to view the output.
-
-Steps to run project in your local machine
-Step 1) Run "yarn". It will install all necessary dependencies required to run project
-step 2) Run "yarn run dev". This will run the project. Then you can visit "http://localhost:5173/" to view the output.
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
