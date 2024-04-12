@@ -1,4 +1,3 @@
-# React + Vite
 # Project Name
 
 ## Steps to Run the Project Locally
@@ -19,6 +18,8 @@ yarn run dev
 
 This will run the project locally. You can then visit [http://localhost:5173/](http://localhost:5173/) to view the output.
 
+
+# React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
